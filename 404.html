@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/recovery/" />
+    <script>
+      // GitHub Pages 404 redirect for SPA
+      var l = window.location;
+      var base = l.pathname.split('/').slice(0, -1).join('/');
+      window.location.replace(base + '/recovery/?redirect=' + encodeURIComponent(l.pathname + l.search + l.hash));
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
