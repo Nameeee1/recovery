@@ -9,6 +9,8 @@ import localizedImg from '../src/assets/img/localized.png';
 import oxygenImg from '../src/assets/img/oxygen.png';
 import oneononeImg from '../src/assets/img/oneonone.png';
 import ivImg from '../src/assets/img/iv.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { useLocation } from 'react-router-dom';
 import {
@@ -46,6 +48,12 @@ export default function Dashboard() {
 
   const [slide, setSlide] = useState(0);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,    
+    });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,43 +113,43 @@ export default function Dashboard() {
     </VideoWrapper>
       
       <CarouselSection>
-  <CarouselTitle>Elevate Your Recovery Experience Today</CarouselTitle>
+  <CarouselTitle  data-aos="fade-right">Elevate Your Recovery Experience Today</CarouselTitle>
 
   <CarouselWrapper>
     <CarouselSlider $currentSlide={slide}>
       <SlideGroup>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={sportsImg} alt="Sports" />
           <CardText>SPORTS MASSAGE</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={saunaImg} alt="Sauna" />
           <CardText>INFRARED SAUNA & COLD PLUNGE</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={injuryImg} alt="Injury Assesment" />
           <CardText>INJURY ASSESMENT</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={normatecImg} alt="Normatec Leg Suppression" />
           <CardText>NORMATEC LEG COMPRESSION</CardText>
         </CardContainer>
       </SlideGroup>
 
       <SlideGroup>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={localizedImg} alt="Localized Cryotherapy" />
           <CardText>LOCALIZED CRYOTHERAPY</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={oxygenImg} alt="Oxygen Theraphy" />
           <CardText>OXYGEN THERAPY</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={oneononeImg} alt="1 on 1 Breath Work Coaching" />
           <CardText>1 ON 1 BREATH WORK COACHING</CardText>
         </CardContainer>
-        <CardContainer>
+        <CardContainer data-aos="fade-up">
         <ImageCard src={ivImg} alt="IV Theraphy" />
           <CardText>IV THERAPY</CardText>
         </CardContainer>

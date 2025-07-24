@@ -1,7 +1,7 @@
 import React from 'react';
 import Dashboard from './Dashboard';
 import styled from 'styled-components';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 const AppContainer = styled.div`
@@ -12,9 +12,10 @@ function App() {
     return (
         <Router>
             <AppContainer>
-                <Routes>
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/recovery" element={<Dashboard />} />
-                </Routes>
+            </Routes>
             </AppContainer>
         </Router>
     );
