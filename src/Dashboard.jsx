@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import recoveryVideo from '../src/assets/img/recovery.mp4';
+import sportsImg from '../src/assets/img/sports.png';
+import saunaImg from '../src/assets/img/sauna.jpg';
+import injuryImg from '../src/assets/img/injuryassessment.png';
+import normatecImg from '../src/assets/img/normatec.png';
+import localizedImg from '../src/assets/img/localized.png';
+import oxygenImg from '../src/assets/img/oxygen.png';
+import oneononeImg from '../src/assets/img/oneonone.png';
+import ivImg from '../src/assets/img/iv.png';
 
 import { useLocation } from 'react-router-dom';
 import {
@@ -91,7 +99,7 @@ export default function Dashboard() {
 
       <VideoWrapper>
       <StyledVideo autoPlay muted loop playsInline>
-        <source src="../src/assets/img/recovery.mp4" type="video/mp4" />
+      <source src={recoveryVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </StyledVideo>
     </VideoWrapper>
@@ -103,38 +111,38 @@ export default function Dashboard() {
     <CarouselSlider $currentSlide={slide}>
       <SlideGroup>
         <CardContainer>
-          <ImageCard src="../src/assets/img/sports.png" alt="Sports" />
+        <ImageCard src={sportsImg} alt="Sports" />
           <CardText>SPORTS MASSAGE</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/sauna.jpg" alt="Sauna" />
+        <ImageCard src={saunaImg} alt="Sauna" />
           <CardText>INFRARED SAUNA & COLD PLUNGE</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/injuryassessment.png" alt="Assessment" />
+        <ImageCard src={injuryImg} alt="Injury Assesment" />
           <CardText>INJURY ASSESMENT</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/normatec.png" alt="Normatec" />
+        <ImageCard src={normatecImg} alt="Normatec Leg Suppression" />
           <CardText>NORMATEC LEG COMPRESSION</CardText>
         </CardContainer>
       </SlideGroup>
 
       <SlideGroup>
         <CardContainer>
-          <ImageCard src="../src/assets/img/localized.png" alt="Localized" />
+        <ImageCard src={localizedImg} alt="Localized Cryotherapy" />
           <CardText>LOCALIZED CRYOTHERAPY</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/oxygen.png" alt="Oxygen" />
+        <ImageCard src={oxygenImg} alt="Oxygen Theraphy" />
           <CardText>OXYGEN THERAPY</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/1on1.png" alt="1 on 1" />
+        <ImageCard src={oneononeImg} alt="1 on 1 Breath Work Coaching" />
           <CardText>1 ON 1 BREATH WORK COACHING</CardText>
         </CardContainer>
         <CardContainer>
-          <ImageCard src="../src/assets/img/iv.png" alt="IV" />
+        <ImageCard src={ivImg} alt="IV Theraphy" />
           <CardText>IV THERAPY</CardText>
         </CardContainer>
       </SlideGroup>

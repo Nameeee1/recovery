@@ -13,7 +13,7 @@ function App() {
         <Router>
             <AppContainer>
                 <Routes>
-                    <Route path="/" element={<Dashboard />} />
+                <Route path="/recovery" element={<Dashboard />} />
                 </Routes>
             </AppContainer>
         </Router>
